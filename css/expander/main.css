@@ -1,0 +1,336 @@
+/*! Reset based on */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+video {
+  display: block;
+  width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+:root {
+  --color-main: #0b3144;
+  --color-secondary: #00ffae;
+  --color-text: #333;
+  --color-background: #fff;
+  --padding-base: 2rem;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: var(--font-size);
+  color: var(--color-text);
+  line-height: 1.25;
+  background-color: var(--color-background);
+}
+@media (min-width: 481px) {
+  html {
+    font-size: 1.48vw;
+  }
+}
+@media (min-width: 1080px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.expander {
+  width: 1080px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: calc(var(--padding-base) * 3);
+}
+
+.section {
+  margin: calc(var(--padding-base) * 2) 0;
+  padding: 0 var(--padding-base);
+}
+
+.centered {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-base);
+}
+@media (min-width: 481px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cta {
+  display: inline-block;
+  font-size: 1.0625rem;
+  color: #fff;
+  text-decoration: none;
+  /* transition: background 0.25s, color 0.25s; */
+  text-transform: uppercase;
+  font-family: 'Camber-md', sans-serif;
+  border-radius: 0.4rem;
+  background: #DE3C0B;
+  padding: 0.5rem 1.8125rem;
+}
+
+.cta p {
+  margin-top: 0.2rem;
+}
+
+.cta:hover {
+cursor: pointer;
+}
+
+.hero > img,
+.hero > picture,
+.hero > video {
+  display: block;
+  width: 100%;
+}
+
+.card .image img,
+.card .image picture {
+  display: block;
+  width: 100%;
+}
+
+.tiles .tile .text {
+  padding: var(--padding-base);
+}
+.tiles .tile .image img,
+.tiles .tile .image picture,
+.tiles .tile .image video,
+.tiles .tile .video img,
+.tiles .tile .video picture,
+.tiles .tile .video video {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+@media (min-width: 481px) {
+  .tiles .tile {
+    display: flex;
+  }
+  .tiles .tile .text,
+.tiles .tile .image,
+.tiles .tile .video {
+    width: 50%;
+  }
+  .tiles .tile .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: calc(var(--padding-base) / 2) var(--padding-base);
+    order: 1;
+  }
+  .tiles .tile .image,
+.tiles .tile .video {
+    order: 2;
+  }
+  .tiles .tile:nth-child(even) .text {
+    order: 2;
+  }
+  .tiles .tile:nth-child(even) .image,
+.tiles .tile:nth-child(even) .video {
+    order: 1;
+  }
+}
+
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(var(--padding-base) * 2.5);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background: #35363B;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  /* border-radius: calc(var(--padding-base) / 2.5) calc(var(--padding-base) / 2.5) 0 0; */
+  transition: all 0.25s, color 0.25s;
+  padding: 1.5rem 3rem;
+}
+.sticky-cta:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-down-button {
+  position: fixed;
+  left: 50%;
+  bottom: 20%;
+  width: 3rem;
+  height: 3rem;
+  transform: translate(-50%, 0);
+  z-index: 1000;
+}
+.scroll-down-button::before, .scroll-down-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/expander/down.svg") no-repeat center center/contain;
+}
+.scroll-down-button::before {
+  animation: scrollDown 2s linear 0s infinite forwards;
+}
+.scroll-down-button::after {
+  animation: scrollDown 2s linear -1s infinite forwards;
+}
+.scroll-down-button span {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.scroll-down-button.scrolled {
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes scrollDown {
+  0% {
+    margin-top: -33%;
+    opacity: 0;
+  }
+  25%, 50% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 33%;
+    opacity: 0;
+  }
+}
+h1,
+.heading {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+h2,
+.subheading {
+  margin-top: var(--padding-base);
+  margin-bottom: calc(var(--padding-base) / 2);
+  font-size: 1.5rem;
+}
+
+h3,
+.title {
+  font-size: 1.125rem;
+}
+
+.heading,
+.subheading,
+.title {
+  color: var(--color-main);
+}
+
+p + p {
+  margin-top: calc(var(--padding-base) / 2);
+}
+
+.lead {
+  margin: var(--padding-base) auto;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
